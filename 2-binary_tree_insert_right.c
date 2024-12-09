@@ -17,12 +17,14 @@ if (parent == NULL)
 return (NULL);
 
 new_tree->n = value;
-if (parent->rigth != NULL)
+new_tree->right = NULL;
+if (parent->right != NULL)
 {
-new_tree->rigth = parent->right;
-parent->right = new_tree;
+new_tree->right = parent->right;
 }
 else
+
+new_tree->left = NULL;
 parent->right = new_tree;
 
 
