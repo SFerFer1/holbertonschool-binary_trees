@@ -3,9 +3,8 @@
 *binary_tree_height - goes through a binary tree using in-order traversal.
 *
 *@tree:  is a pointer to the root node of the tree to traverse.
-*@func:is a pointer to a function to call for each node.
 *
-*Return: If tree or func is NULL.
+*Return: return heigth of the tree or 0.
 */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
