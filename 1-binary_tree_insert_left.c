@@ -15,8 +15,10 @@ if (new_tree == NULL)
 return (NULL);
 }
 if (parent == NULL)
+{
+free(new_tree);
 return (NULL);
-
+}
 new_tree->n = value;
 new_tree->left = NULL;
 new_tree->right = NULL;
@@ -29,6 +31,6 @@ new_tree->left->parent = new_tree;
 new_tree->parent = parent;
 parent->left = new_tree;
 
-free(new_tree);
+
 return (new_tree);
 }
