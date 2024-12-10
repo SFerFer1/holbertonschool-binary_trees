@@ -18,12 +18,13 @@ return (NULL);
 
 new_tree->n = value;
 new_tree->left = NULL;
+new_tree->right = NULL;
 if (parent->left != NULL)
 {
 new_tree->left = parent->left;
 }
 
-parent->right = NULL;
+
 parent->left = new_tree;
 
 return (new_tree);
