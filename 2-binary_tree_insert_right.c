@@ -30,6 +30,6 @@ new_tree->left = NULL;
 parent->right = new_tree;
 new_tree->parent = parent;
 
-
+free(new_tree);
 return (new_tree);
 }
