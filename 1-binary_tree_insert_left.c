@@ -22,6 +22,7 @@ new_tree->right = NULL;
 if (parent->left != NULL)
 {
 new_tree->left = parent->left;
+new_tree->left->parent = new_tree;
 }
 
 new_tree->parent = parent;
