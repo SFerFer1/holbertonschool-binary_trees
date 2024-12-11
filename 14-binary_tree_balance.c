@@ -19,8 +19,10 @@ h_right = binary_tree_balance(tree->right);
 
 
 	if (h_left > h_right)
-		return ((h_left - h_right) + 1);
+		return (h_left - h_right);
+	else if (h_left ==  h_right)
+		return (0);
 	else
-		return ((h_right - h_left + 1));
+		return (h_right - h_left);
 
 }
