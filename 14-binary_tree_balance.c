@@ -17,9 +17,10 @@ return (0);
 h_left = binary_tree_balance(tree->left);
 h_right = binary_tree_balance(tree->right);
 
+
 	if (h_left > h_right)
-		return (h_left - h_right);
+		return ((h_left - h_right) + 1);
 	else
-		return (h_right - h_left);
+		return ((h_right - h_left + 1));
 
 }
