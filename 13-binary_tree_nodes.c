@@ -17,7 +17,7 @@ size_t count = 0;
 if (tree->parent == NULL)
 {
 if (tree->left != NULL && tree->right != NULL)
-return(3);
+return(1);
 
 if ((tree->left != NULL) ^ (tree->right != NULL))
 return(2);
