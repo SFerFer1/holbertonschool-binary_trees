@@ -14,15 +14,10 @@ size_t h_left, h_right;
 if ((tree == NULL) || (tree->left == NULL && tree->right == NULL))
 return (0);
 
-h_left = binary_tree_balance(tree->left);
-h_right = binary_tree_balance(tree->right);
+h_left = binary_tree_height(tree->left);
+h_right = binary_tree_height(tree->right);
 
 
-	if (h_left > h_right)
-		return (h_left - h_right);
-	else if (h_left ==  h_right)
-		return (0);
-	else
-		return (h_right - h_left);
 
+return (h_right - h_left);
 }
