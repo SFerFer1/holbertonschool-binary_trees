@@ -22,7 +22,7 @@ return(3);
 if ((tree->left != NULL) ^ (tree->right != NULL))
 return(2);
 else
-return(1);
+return(0);
 
 }
 
