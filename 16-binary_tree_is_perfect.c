@@ -104,10 +104,12 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	size_t height = binary_tree_height(tree);
 	size_t cantl = 2;
 	size_t i;
-for (i = 0 ; i < height ; i++)
-{
-cantl = (cantl * cantl);
-}
+	size_t leafs = binary_tree_leaves(tree);
+
+	for (i = 0 ; i < height ; i++)
+	{
+		cantl *= 2;
+	}
 
 	if (tree == NULL)
 		return (0);
@@ -115,7 +117,7 @@ cantl = (cantl * cantl);
 		return (0);
 	else
 	{
-		if ( == binary_tree_leaves(tree))
+		if (cantl == leafs)
 			return (1);
 		else
 			return(0);
