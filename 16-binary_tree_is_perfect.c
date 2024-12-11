@@ -102,6 +102,12 @@ count += binary_tree_leaves(tree->right);
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	size_t height = binary_tree_height(tree);
+	size_t cantl = 2;
+	size_t i;
+for (i = 0 ; i < height ; i++)
+{
+cantl = (cantl * cantl);
+}
 
 	if (tree == NULL)
 		return (0);
@@ -109,7 +115,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		return (0);
 	else
 	{
-		if (pow(2, height) == binary_tree_leaves(tree))
+		if ( == binary_tree_leaves(tree))
 			return (1);
 		else
 			return(0);
