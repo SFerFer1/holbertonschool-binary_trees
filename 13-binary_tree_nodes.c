@@ -13,11 +13,16 @@ size_t count = 0;
 
 	if (tree == NULL)
 	return (0);
-	if (tree->left == NULL || tree->right == NULL)
+
+	if (tree->parent == NULL)
+	return(3);
+
+	if (tree->left != NULL || tree->right != NULL)
 	return (1);
 
-	count += binary_tree_leaves(tree->left);
-	count += binary_tree_leaves(tree->right);
+	count += binary_tree_nodes(tree->left);
+	count += binary_tree_nodes(tree->right);
+
 
 	return (count);
 }
